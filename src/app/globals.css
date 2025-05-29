@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: rgba(20, 26, 37, 1);
+  --secondary: rgba(92, 95, 105, 1);
+
+  --primary-accent: rgba(51, 20, 50, 1);
+  --foreground-accent: rgba(145, 42, 42, 1);
+  --hero-background: #f3f3f5;
+  --gradient-gold: linear-gradient(
+    90deg,
+    #c8b478 0%,
+    #f7f1c6 10%,
+    #d6c190 25%,
+    #f5f0c0 40%,
+    #c8b478 60%,
+    #f7f1c6 75%,
+    #d6c190 90.38%,
+    #d6c190 100%
+  );
+  --gradient-hero: linear-gradient(114deg, #331432 44.5%, #993c96 114.92%);
+  --gradient-price: linear-gradient(114.31deg, #331432 44.5%, #993c96 114.92%);
+
+  --primary-50: #fbf7fc;
+  --primary-100: #f8eef9;
+  --primary-200: #f0dcf2;
+  --primary-300: #7cc9fd;
+  --primary-400: #36affa;
+  --primary-500: #0c95eb;
+  --primary-600: #8f79aa;
+  --primary-700: #015da3;
+  --primary-800: #064f86;
+  --primary-900: #0b436f;
+  --primary-950: #331432;
+
+  --secondary-50: #fefde8;
+  --secondary-100: #fbe5e5;
+  --secondary-200: #fcf48c;
+  --secondary-300: #f9e74b;
+  --secondary-400: #f5d20e;
+  --secondary-500: #e6bc0c;
+  --secondary-600: #c69208;
+  --secondary-700: #9e680a;
+  --secondary-800: #835310;
+  --secondary-900: #6f4314;
+  --secondary-950: #412307;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+.text-gradient-gold {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.font-body {
+  font-family: "Raleway", sans-serif;
+}
+
+.font-table {
+  font-family: "Public Sans", sans-serif;
+}
+
+.bg-gradient-gold {
+  background: var(--gradient-gold);
+}
+
+.bg-price {
+  background: var(--gradient-price);
+}
+
+.bg-hero {
+  background: var(--gradient-hero);
+}
+
+body {
+  @apply text-lg;
+
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "El Messiri", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+#logos svg {
+  @apply w-fit h-10 sm:h-12;
+}
+
+.benefit-section:last-of-type > div {
+  @apply mb-10;
+}
+
+contributions-swiper {
+  padding: 20px 0;
+}
+
+.contributions-swiper .swiper-slide {
+  height: auto;
+}
+
+/* Hide default Swiper navigation buttons */
+.contributions-swiper .swiper-button-next::after,
+.contributions-swiper .swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none;
+}
+
+.swiper-button-next-custom.swiper-button-disabled,
+.swiper-button-prev-custom.swiper-button-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.swiper-slide.swiper-slide-active {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(79 70 229 / var(--tw-border-opacity)) !important;
+}
+
+.swiper-slide.swiper-slide-active > .swiper-slide-active\:text-indigo-600 {
+  --tw-text-opacity: 1;
+  color: rgb(79 70 229 / var(--tw-text-opacity));
+}
+
+.swiper-slide.swiper-slide-active
+  > .flex
+  .grid
+  .swiper-slide-active\:text-indigo-600 {
+  --tw-text-opacity: 1;
+  color: rgb(79 70 229 / var(--tw-text-opacity));
+}
+
+table,
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td {
+  padding: 0;
+  border-spacing: 0;
+}
+
+.float {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 23px;
+  z-index: 100;
+}
