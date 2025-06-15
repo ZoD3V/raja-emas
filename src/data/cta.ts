@@ -1,6 +1,6 @@
 export const ctaDetails = {
   badge: "TRANSAKSI AMAN",
-  heading: "Kami Terima Emas Tanpa Surat Anda dengan Harga Terbaik, Aman, dan Dibeli Tunai!",
+  heading: "Raja Emas Indonesia Tidak Menerima / Membeli Emas Hasil Pencurian atau Tindak Pidana Lainya.",
   subheading:
     "Raja Emas Indonesia tempat jual emas yang sah dengan proses cepat dan transparan. Tak perlu ragu soal keamanan karena semua transaksi kami dilakukan oleh profesional sesuai prosedur.",
   appStoreUrl: "#pricing",

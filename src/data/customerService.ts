@@ -1,5 +1,17 @@
 export const contacts = [
   {
+    heading: "Jakarta Utara",
+    subHeading: "Pik",
+    image: "/images/customer-service/jakarta_utara.jpg",
+    linkWhatsapp: "https://wa.me/+6282299995125",
+  },
+  {
+    heading: "Jakarta Utara",
+    subHeading: "Kelapa Gading",
+    image: "/images/customer-service/jakarta_utara.jpg",
+    linkWhatsapp: "https://wa.me/+6282299995041",
+  },
+  {
     heading: "Jakarta Barat",
     subHeading: "Cengkareng",
     image: "/images/customer-service/jakarta_barat.jpg",
@@ -12,16 +24,16 @@ export const contacts = [
     linkWhatsapp: "https://wa.me/+6282199999696",
   },
   {
-    heading: "Jakarta Utara",
-    subHeading: "Pik",
-    image: "/images/customer-service/jakarta_utara.jpg",
-    linkWhatsapp: "https://wa.me/+6282299995125",
+    heading: "Jakarta Pusat",
+    subHeading: "Petojo",
+    image: "/images/customer-service/jakarta_pusat.jpg",
+    linkWhatsapp: "https://wa.me/+6282299995035",
   },
   {
-    heading: "Bogor",
-    subHeading: "Pasar Kembang",
-    image: "/images/customer-service/bogor.jpg",
-    linkWhatsapp: "https://wa.me/+6282299993067",
+    heading: "Jakarta Selatan",
+    subHeading: "Pondok Indah",
+    image: "/images/customer-service/jakarta_pusat.jpg",
+    linkWhatsapp: "https://wa.me/+6282299995034",
   },
   {
     heading: "Jakarta Selatan",
@@ -30,46 +42,10 @@ export const contacts = [
     linkWhatsapp: "https://wa.me/+6282299995127",
   },
   {
-    heading: "Tanggerang",
-    subHeading: "Aeropolis",
-    image: "/images/customer-service/tanggerang.jpg",
-    linkWhatsapp: "https://wa.me/+6282299997765",
-  },
-  {
-    heading: "Tanggerang Selatan",
-    subHeading: "Aeropolis",
-    image: "/images/customer-service/tanggerang_selatan.jpg",
-    linkWhatsapp: "https://wa.me/+6282299993248",
-  },
-  {
     heading: "Depok",
     subHeading: "ITC Depok",
     image: "/images/customer-service/depok.jpg",
     linkWhatsapp: "https://wa.me/+6282299997767",
-  },
-  {
-    heading: "Bandung",
-    subHeading: "Outlet Bandung",
-    image: "/images/customer-service/bandung.jpg",
-    linkWhatsapp: "https://wa.me/+6282299997764",
-  },
-  {
-    heading: "Bali",
-    subHeading: "Denpasar",
-    image: "/images/customer-service/bali.jpg",
-    linkWhatsapp: "https://wa.me/+6282299993136",
-  },
-  {
-    heading: "Medan",
-    subHeading: "Medan Mall",
-    image: "/images/customer-service/medan.jpg",
-    linkWhatsapp: "https://wa.me/+6282299993238",
-  },
-  {
-    heading: "Lombok",
-    subHeading: "Mataram",
-    image: "/images/customer-service/lombok.jpg",
-    linkWhatsapp: "https://wa.me/+6282299993018",
   },
   {
     heading: "Bekasi",
@@ -78,10 +54,46 @@ export const contacts = [
     linkWhatsapp: "https://wa.me/+6282299993167",
   },
   {
+    heading: "Cibubur",
+    subHeading: "Plasa Cibubur Lt.l No.19",
+    image: "/images/customer-service/cibubur.jpg",
+    linkWhatsapp: "https://wa.me/+6282299995026",
+  },
+  {
+    heading: "Tanggerang",
+    subHeading: "Aeropolis",
+    image: "/images/customer-service/tanggerang.jpg",
+    linkWhatsapp: "https://wa.me/+6282299997765",
+  },
+  {
     heading: "Tanggerang",
     subHeading: "Tangcity Mall",
     image: "/images/customer-service/tanggerang2.jpg",
     linkWhatsapp: "https://wa.me/+6282299994127",
+  },
+  {
+    heading: "Tanggerang Selatan",
+    subHeading: "Mall ITC BSD",
+    image: "/images/customer-service/tanggerang_selatan.jpg",
+    linkWhatsapp: "https://wa.me/+6282299993248",
+  },
+  {
+    heading: "Bogor",
+    subHeading: "Pasar Kembang",
+    image: "/images/customer-service/bogor.jpg",
+    linkWhatsapp: "https://wa.me/+6282299993067",
+  },
+  {
+    heading: "Bandung",
+    subHeading: "Outlet Bandung",
+    image: "/images/customer-service/bandung.jpg",
+    linkWhatsapp: "https://wa.me/+6282299997764",
+  },
+  {
+    heading: "Kopo Bandung",
+    subHeading: "Outlet Kopo Bandung",
+    image: "/images/customer-service/kopo.jpg",
+    linkWhatsapp: "https://wa.me/+6282299995042",
   },
   {
     heading: "Surabaya",
@@ -90,15 +102,22 @@ export const contacts = [
     linkWhatsapp: "https://wa.me/+6282299994123",
   },
   {
-    heading: "Cibubur",
-    subHeading: "Plasa Cibubur Lt.l No.19",
-    image: "/images/customer-service/cibubur.jpg",
-    linkWhatsapp: "https://wa.me/+6282299995026",
+    heading: "Medan",
+    subHeading: "Medan Mall",
+    image: "/images/customer-service/medan.jpg",
+    linkWhatsapp: "https://wa.me/+6282299993238",
   },
   {
-    heading: "Kopo Bandung",
-    subHeading: "Outlet Kopo Bandung",
-    image: "/images/customer-service/kopo.jpg",
-    linkWhatsapp: "https://wa.me/+6282299995042",
+    heading: "Bali",
+    subHeading: "Denpasar",
+    image: "/images/customer-service/bali.jpg",
+    linkWhatsapp: "https://wa.me/+6282299993136",
+  },
+
+  {
+    heading: "Lombok",
+    subHeading: "Mataram",
+    image: "/images/customer-service/lombok.jpg",
+    linkWhatsapp: "https://wa.me/+6282299993018",
   },
 ];

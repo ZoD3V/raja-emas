@@ -27,7 +27,7 @@ export const locationData = {
           hours: "Pukul 10.00 - 21.00 WIB",
           linkWhatsapp: "https://wa.me/6282299995125",
           mapEmbed:
-            "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31734.357763081498!2d106.902395!3d-6.158242!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f54e11b12767%3A0xba229ae3138099b5!2sRaja%20Emas%20Indonesia%20-%20Kelapa%20Gading!5e0!3m2!1sen!2sus!4v1748494678325!5m2!1sen!2sus",
+            "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31734.39302040786!2d106.900993!3d-6.157652000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f54e11b12767%3A0xba229ae3138099b5!2sRaja%20Emas%20Indonesia%20-%20Kelapa%20Gading!5e0!3m2!1sid!2sus!4v1748930519329!5m2!1sid!2sus",
         },
         {
           title: "Jakarta Selatan - Pondok Indah",
@@ -103,22 +103,6 @@ export const locationData = {
       ],
     },
     {
-      area: "Bogor",
-      data: [
-        {
-          title: "Outlet Bogor",
-          address:
-            "Pasar Kebon Kembang, Blok F Trade Center Pasar Kebon Kembang Lantai Dasar No.194, Paledang, Bogor Tengah, Kota Bogor, Jawa Barat 16122",
-          phone: "0822-9999-3067",
-          whatsapp: "0822-9999-3067",
-          hours: "Pukul 09.00 - 17.00 WIB",
-          linkWhatsapp: "https://wa.me/6282299993067",
-          mapEmbed:
-            "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31707.48459018412!2d106.792264!3d-6.59266!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c50e93b76f37%3A0x6431bc1e47856e14!2sRaja%20Emas%20Indonesia%20Bogor!5e0!3m2!1sen!2sus!4v1745726527175!5m2!1sen!2sus",
-        },
-      ],
-    },
-    {
       area: "Area Bekasi",
       data: [
         {
@@ -149,7 +133,7 @@ export const locationData = {
       area: "Area Tanggerang",
       data: [
         {
-          title: "Tangerang - Aeropolis",
+          title: "Outlet Tangerang",
           address:
             "ruko apartemen, Aeropolis Commercial Park 2 A2. GT.06, Jl. Aeropolis, RT.004/RW.008, Neglasari, Kec. Neglasari, Kota Tangerang, Banten 15129",
           phone: "0822-9999-7765",
@@ -160,7 +144,7 @@ export const locationData = {
             "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63470.39385688982!2d106.630975!3d-6.144184!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f962d8f01ba9%3A0x3f261d5896645e64!2sRaja%20Emas%20Indonesia%20Aeropolis%20-%20Tangerang!5e0!3m2!1sen!2sus!4v1745726936445!5m2!1sen!2sus",
         },
         {
-          title: "Tangerang Selatan - Mall ITC BSD",
+          title: "Outlet Mall ITC BSD",
           address:
             "Mall ITC BSD Tangsel, Jl. Pahlawan Seribu No.12 LT. Dasar Blok C3 No.3A-5, Lengkong Wetan, Kec. Serpong, tangerang, Banten 15310",
           phone: "0822-9999-3248",
@@ -171,7 +155,7 @@ export const locationData = {
             "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31726.637889293303!2d106.664132!3d-6.286099!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fbba703e37ef%3A0x1781c609e507746d!2sRaja%20Emas%20Indonesia%20Mall%20ITC%20BSD!5e0!3m2!1sen!2sus!4v1745727092262!5m2!1sen!2sus",
         },
         {
-          title: "Tangerang - Tangcity Mall",
+          title: "Outlet Tangcity Mall",
           address:
             "Tangcity Mall, Jl. Jenderal Sudirman.1 Lantai LG D-09, Cikokol, Kec. Tangerang, Banten 15117",
           phone: "0822-9999-4127",
@@ -184,10 +168,26 @@ export const locationData = {
       ],
     },
     {
+      area: "Outlet Bogor",
+      data: [
+        {
+          title: "Outlet Bogor",
+          address:
+            "Pasar Kebon Kembang, Blok F Trade Center Pasar Kebon Kembang Lantai Dasar No.194, Paledang, Bogor Tengah, Kota Bogor, Jawa Barat 16122",
+          phone: "0822-9999-3067",
+          whatsapp: "0822-9999-3067",
+          hours: "Pukul 09.00 - 17.00 WIB",
+          linkWhatsapp: "https://wa.me/6282299993067",
+          mapEmbed:
+            "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31707.48459018412!2d106.792264!3d-6.59266!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69c50e93b76f37%3A0x6431bc1e47856e14!2sRaja%20Emas%20Indonesia%20Bogor!5e0!3m2!1sen!2sus!4v1745726527175!5m2!1sen!2sus",
+        },
+      ],
+    },
+    {
       area: "Area Bandung",
       data: [
         {
-          title: "Bandung-Sukajadi",
+          title: "Outlet Bandung",
           address:
             "Jl. Sukajadi No.158, Cipedes, Kel. Pasteur, Kec. Sukajadi, Kota Bandung, Jawa Barat 40162",
           phone: "0822-9999-7764",
@@ -198,7 +198,7 @@ export const locationData = {
             "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63376.45635587361!2d107.596938!3d-6.887187!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7a7c15acbd1%3A0x94cf82e2d4aa77a2!2sRaja%20Emas%20Indonesia%20Bandung!5e0!3m2!1sen!2sus!4v1745727729023!5m2!1sen!2sus",
         },
         {
-          title: "Bandung-Kopo",
+          title: "Outlet Kopo Bandung",
           address:
             "Jl. Raya Kopo No.632, Babakan Ciparay, Kec. Babakan Ciparay, Kota Bandung, Jawa Barat 40225",
           phone: "0822-9999-5042",
