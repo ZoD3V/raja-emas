@@ -3,7 +3,6 @@ const nextConfig = {
   images: {
     domains: ["randomuser.me"],
   },
-  output: "export",
   images: {
     unoptimized: true,
   },

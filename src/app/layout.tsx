@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { El_Messiri } from "next/font/google";
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { siteDetails } from "@/data/siteDetails";
 
 import "./globals.css";
@@ -47,10 +45,10 @@ export default function RootLayout({
         {siteDetails.googleAnalyticsId && (
           <GoogleAnalytics gaId={siteDetails.googleAnalyticsId} />
         )}
-        <Header />
+        {/* <Header /> */}
         <main>{children}</main>
-        <SpeedInsights/>
-        <Footer />
+        <SpeedInsights />
+        {/* <Footer /> */}
       </body>
     </html>
   );
