@@ -2,7 +2,6 @@
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { useActionState } from "react";
 import {
   Card,
   CardContent,
@@ -13,15 +12,14 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { signInCredentials } from "@/lib/action";
-import { useFormStatus } from "react-dom";
 import { Loader2Icon } from "lucide-react";
+import { useFormState } from "react-dom";
 
 export function LoginForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
-  const [state, formAction] = useActionState(signInCredentials, null);
-  const { pending } = useFormStatus();
+  const [state, formAction, isPending] = useFormState(signInCredentials, null);
 
   return (
     <div className={cn("flex flex-col gap-6 font-body", className)} {...props}>
@@ -46,7 +44,6 @@ export function LoginForm({
                   type="email"
                   name="email"
                   placeholder="email@example.com"
-                  // onChange={handleInputChange}
                   required
                 />
                 <div className="text-red-500 text-sm">
@@ -63,10 +60,10 @@ export function LoginForm({
                 </div>
               </div>
               <div className="flex flex-col gap-3">
-                {pending ? (
+                {isPending ? (
                   <Button disabled>
                     <Loader2Icon className="animate-spin" />
-                    Please wait
+                    Loading
                   </Button>
                 ) : (
                   <Button type="submit" className="w-full">

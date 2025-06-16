@@ -13,12 +13,16 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { signUpCredentials } from "@/lib/action";
+import { Loader2Icon } from "lucide-react";
 
 export function RegisterForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
-  const [state, formAction] = useActionState(signUpCredentials, null);
+  const [state, formAction, isPending] = useActionState(
+    signUpCredentials,
+    null
+  );
 
   return (
     <div className={cn("flex flex-col gap-6 font-body", className)} {...props}>
@@ -41,6 +45,11 @@ export function RegisterForm({
                   placeholder="username"
                   required
                 />
+                {state?.error?.name && (
+                  <span className="text-red-500 text-sm">
+                    {state?.error?.name}
+                  </span>
+                )}
               </div>
               <div className="grid gap-3">
                 <Label htmlFor="email">Email</Label>
@@ -62,11 +71,23 @@ export function RegisterForm({
                   <Label htmlFor="password">Password</Label>
                 </div>
                 <Input id="password" name="password" type="password" required />
+                {state?.error?.password && (
+                  <span className="text-red-500 text-sm">
+                    {state?.error?.password}
+                  </span>
+                )}
               </div>
               <div className="flex flex-col gap-3">
-                <Button type="submit" className="w-full">
-                  Register
-                </Button>
+                {isPending ? (
+                  <Button disabled>
+                    <Loader2Icon className="animate-spin" />
+                    Loading
+                  </Button>
+                ) : (
+                  <Button type="submit" className="w-full">
+                    Register
+                  </Button>
+                )}
               </div>
             </div>
           </form>

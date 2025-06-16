@@ -32,6 +32,8 @@ export const signUpCredentials = async (
     return {
       error: {
         email: "Email sudah terdaftar, silakan gunakan email lain.",
+        password: "",
+        name: "",
       },
     };
   }
