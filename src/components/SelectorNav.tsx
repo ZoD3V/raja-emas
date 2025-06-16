@@ -6,7 +6,6 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
 const SelectorNav = ({ userData }: { userData: any }) => {
   const [nav, setNav] = useState(false);
-  console.log(userData);
   return (
     <>
       <div className="ml-auto flex items-center space-x-4">

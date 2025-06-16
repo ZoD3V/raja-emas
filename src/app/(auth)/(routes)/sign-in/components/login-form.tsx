@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
+import { useActionState } from "react";
 import {
   Card,
   CardContent,
@@ -13,49 +13,15 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { signInCredentials } from "@/lib/action";
+import { useFormStatus } from "react-dom";
+import { Loader2Icon } from "lucide-react";
 
 export function LoginForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
-  const [state, setState] = useState({
-    email: "",
-    password: "",
-    errors: {
-      email: "",
-      password: "",
-    },
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    console.log(name)
-    setState((prevState) => ({
-      ...prevState,
-      [name]: value,
-      errors: {
-        ...prevState.errors,
-        [name]: "", // Reset error message when input changes
-      },
-    }));
-  };
-
-  // Handle form submit
-  const handleSubmit = async (e: React.FormEvent) => {
-    console.log('submit')
-    e.preventDefault();
-    console.log(state)
-
-    // Mengonversi data form ke FormData
-    const formData = new FormData();
-    formData.append("email", state.email);
-    formData.append("password", state.password);
-
-    // Panggil signUpCredentials dengan FormData
-    const result = await signInCredentials(null, formData);
-
-    console.log(result); // Hasil dari signUpCredentials
-  };
+  const [state, formAction] = useActionState(signInCredentials, null);
+  const { pending } = useFormStatus();
 
   return (
     <div className={cn("flex flex-col gap-6 font-body", className)} {...props}>
@@ -65,9 +31,13 @@ export function LoginForm({
           <CardDescription>
             Enter your email below to login to your account
           </CardDescription>
+          {state?.message && (
+            <div className="text-red-500 text-sm mb-4">{state?.message}</div>
+          )}
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSubmit}>
+          <div></div>
+          <form action={formAction}>
             <div className="flex flex-col gap-6">
               <div className="grid gap-3">
                 <Label htmlFor="email">Email</Label>
@@ -75,27 +45,34 @@ export function LoginForm({
                   id="email"
                   type="email"
                   name="email"
-                  placeholder="m@example.com"
-                  onChange={handleInputChange}
+                  placeholder="email@example.com"
+                  // onChange={handleInputChange}
                   required
                 />
+                <div className="text-red-500 text-sm">
+                  {state?.error?.email}
+                </div>
               </div>
               <div className="grid gap-3">
                 <div className="flex items-center">
                   <Label htmlFor="password">Password</Label>
                 </div>
-                <Input
-                  id="password"
-                  type="password"
-                  name="password"
-                  required
-                  onChange={handleInputChange}
-                />
+                <Input id="password" type="password" name="password" required />
+                <div className="text-red-500 text-sm">
+                  {state?.error?.password}
+                </div>
               </div>
               <div className="flex flex-col gap-3">
-                <Button type="submit" className="w-full">
-                  Login
-                </Button>
+                {pending ? (
+                  <Button disabled>
+                    <Loader2Icon className="animate-spin" />
+                    Please wait
+                  </Button>
+                ) : (
+                  <Button type="submit" className="w-full">
+                    Login
+                  </Button>
+                )}
               </div>
             </div>
           </form>

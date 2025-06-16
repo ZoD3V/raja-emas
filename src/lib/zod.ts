@@ -1,8 +1,8 @@
 import { object, string } from "zod";
 
 export const SignInSchema = object({
-  email: string(),
-  password: string(),
+  email: string().email("Invalid Email"),
+  password: string().min(8, "Password must be more than 8 characters"),
 });
 
 export const SignUpSchema = object({
