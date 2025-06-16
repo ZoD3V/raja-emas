@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { CategoryColumn } from "./columns";
 import {
   DropdownMenu,
@@ -12,15 +12,12 @@ import { Button } from "@/components/ui/button";
 import { Copy, Edit, MoreHorizontal, Trash } from "lucide-react";
 import toast from "react-hot-toast";
 import { useParams, useRouter } from "next/navigation";
-import axios from "axios";
 
 interface CellActionProps {
   data: CategoryColumn;
 }
 
 const CellAction = ({ data }: CellActionProps) => {
-  const [loading, setLoading] = useState(false);
-  const [open, setOpen] = useState(false);
 
   const params = useParams();
   const router = useRouter();
@@ -30,22 +27,6 @@ const CellAction = ({ data }: CellActionProps) => {
     toast.success("Id Copy Successfully");
   };
 
-  const onDelete = async () => {
-    try {
-      setLoading(true);
-      await axios.delete(`/api/${params.storeId}/category/${data.id}`);
-      router.refresh();
-      router.push(`/${params.storeId}/category`);
-      toast.success("Category deleted.");
-    } catch (error: any) {
-      toast.error(
-        "Make sure you removed all products using this category first." + error
-      );
-    } finally {
-      setLoading(false);
-      setOpen(false);
-    }
-  };
   return (
     <>
       <DropdownMenu>
@@ -69,7 +50,7 @@ const CellAction = ({ data }: CellActionProps) => {
             <Edit className="mr-2 h-4 w-4" />
             Update
           </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => setOpen(true)}>
+          <DropdownMenuItem>
             <Trash className="mr-2 h-4 w-4" />
             Delete
           </DropdownMenuItem>

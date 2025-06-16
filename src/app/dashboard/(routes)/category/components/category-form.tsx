@@ -32,7 +32,6 @@ const formSchema = z.object({
 type CategoryFormValues = z.infer<typeof formSchema>;
 
 const CategoryForm: React.FC<SettingProps> = ({ initialData }) => {
-  const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const title = initialData ? "Edit a Category" : "Create Category";
@@ -66,24 +65,9 @@ const CategoryForm: React.FC<SettingProps> = ({ initialData }) => {
       router.refresh();
       toast.success(toastMsg);
     } catch (error) {
-      toast.error("Something went wrong");
+      toast.error(`Something went wrong ${error}`);
     } finally {
       setLoading(false);
-    }
-  };
-
-  const onDelete = async () => {
-    try {
-      setLoading(true);
-      await axios.delete(`/api/${params.storeId}/banner/${params.categoryId}`);
-      router.refresh();
-      router.push(`/${params.storeId}/banner`);
-      toast.success("Category deleted");
-    } catch (error) {
-      toast.error("Make sure you removed all products using this Category");
-    } finally {
-      setLoading(false);
-      setOpen(false);
     }
   };
 
@@ -96,9 +80,6 @@ const CategoryForm: React.FC<SettingProps> = ({ initialData }) => {
           <Button
             variant="destructive"
             size="sm"
-            onClick={() => {
-              setOpen(true);
-            }}
           >
             <Trash className="h-4 w-4" />
           </Button>
