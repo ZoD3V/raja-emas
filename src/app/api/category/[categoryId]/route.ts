@@ -4,16 +4,17 @@ import { NextResponse } from "next/server";
 
 export async function GET(
   req: Request,
-  { params }: { params: { categoryId: string } }
+  { params }: { params: Promise<{ categoryId: string }> }
 ) {
+  const categoryId = await params;
   try {
-    if (!params.categoryId) {
+    if (!categoryId) {
       return new NextResponse("Category id is required", { status: 400 });
     }
 
     const category = await prisma.category.findUnique({
       where: {
-        id: params.categoryId,
+        id: categoryId.categoryId,
       },
     });
 
@@ -26,8 +27,10 @@ export async function GET(
 
 export async function DELETE(
   req: Request,
-  { params }: { params: { categoryId: string; storeId: string } }
+  { params }: { params: Promise<{ categoryId: string }> }
 ) {
+  const categoryId = await params;
+
   try {
     const session = await auth();
 
@@ -35,13 +38,13 @@ export async function DELETE(
       return new NextResponse("Unauthenticated", { status: 403 });
     }
 
-    if (!params.categoryId) {
+    if (!categoryId) {
       return new NextResponse("Category id is required", { status: 400 });
     }
 
     const category = await prisma.category.deleteMany({
       where: {
-        id: params.categoryId,
+        id: categoryId.categoryId,
       },
     });
 
@@ -54,8 +57,9 @@ export async function DELETE(
 
 export async function PATCH(
   req: Request,
-  { params }: { params: { categoryId: string; storeId: string } }
+  { params }: { params: Promise<{ categoryId: string }> }
 ) {
+  const categoryId = await params;
   try {
     const session = await auth();
 
@@ -70,13 +74,13 @@ export async function PATCH(
     if (!name) {
       return new NextResponse("name is required", { status: 400 });
     }
-    if (!params.categoryId) {
+    if (!categoryId) {
       return new NextResponse("banner id is required", { status: 400 });
     }
 
     const category = await prisma.category.update({
       where: {
-        id: params.categoryId,
+        id: categoryId.categoryId,
       },
       data: {
         name,
