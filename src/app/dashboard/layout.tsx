@@ -6,7 +6,7 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="font-sans">
+    <div>
       <Navbar />
 
       {children}

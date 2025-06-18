@@ -91,3 +91,25 @@ model Category{
   updatedAt DateTime @updatedAt
 
 }
+
+model Area {
+  id      String     @id @default(uuid())
+  name    String   @unique
+  stores  Store[]
+}
+
+model Store {
+  id              String     @id @default(uuid())
+  title           String
+  address         String
+  phone           String
+  whatsapp        String
+  hours           String
+  linkWhatsapp    String
+  mapEmbed        String
+  area            Area     @relation(fields: [areaId], references: [id])
+  areaId          String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+}

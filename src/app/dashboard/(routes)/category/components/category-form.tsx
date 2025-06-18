@@ -55,13 +55,13 @@ const CategoryForm: React.FC<SettingProps> = ({ initialData }) => {
 
       if (initialData) {
         await axios.patch(
-          `/api/${params.storeId}/category/${params.categoryId}`,
+          `/api/category/${params.categoryId}`,
           data
         );
       } else {
-        await axios.post(`/api/${params.storeId}/category`, data);
+        await axios.post(`/api/category`, data);
       }
-      router.push(`/${params.storeId}/category`);
+      router.push(`/dashboard/category`);
       router.refresh();
       toast.success(toastMsg);
     } catch (error) {

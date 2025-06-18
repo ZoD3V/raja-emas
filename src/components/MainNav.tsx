@@ -12,23 +12,23 @@ const MainNav = ({ className }: React.HTMLAttributes<HTMLElement>) => {
     {
       href: `/dashboard`,
       label: "Overview",
-      active: pathName,
+      active: pathName === `/dashboard`,
       icon: <BarChart4 />,
     },
     {
-      href: `/news`,
+      href: `/dashboard/news`,
       label: "News",
       active: pathName === `/news`,
       icon: <GalleryThumbnails />,
     },
     {
-      href: `/category`,
+      href: `/dashboard/category`,
       label: "Category",
-      active: pathName === `/category`,
+      active: pathName === `/dashboard/category`,
       icon: <ListStart />,
     },
     {
-      href: `/location`,
+      href: `/dashboard/location`,
       label: "Location",
       active: pathName === `/location`,
       icon: <MapPin />,

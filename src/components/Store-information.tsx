@@ -14,9 +14,9 @@ const StoreInformation = () => {
           size="sm"
           role="combobox"
           aria-label="Select a Store"
-          className={cn("w-fit justify-between")}
+          className={cn("w-fit justify-between text-base items-center")}
         >
-          <StoreIcon className="mr-2 h-4 w-4" />
+          <StoreIcon className="mr-1 h-5 w-5" />
           Raja Emas
         </Button>
       </PopoverTrigger>
