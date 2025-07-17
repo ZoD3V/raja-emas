@@ -30,6 +30,17 @@ export const locationData = {
             "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31734.39302040786!2d106.900993!3d-6.157652000000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f54e11b12767%3A0xba229ae3138099b5!2sRaja%20Emas%20Indonesia%20-%20Kelapa%20Gading!5e0!3m2!1sid!2sus!4v1748930519329!5m2!1sid!2sus",
         },
         {
+          title: "Jakarta Utara - Sunter",
+          address:
+            "Metro Sunter Plaza, Jl. Danau Sunter Utara No.10, RT.10/RW.4, Papanggo, Kec. Tj. Priok, Jkt Utara, Daerah Khusus Ibukota Jakarta 14350",
+          phone: "0822-9999-5087",
+          whatsapp: "0822-9999-5087",
+          hours: "Pukul 10.00 - 21.00 WIB",
+          linkWhatsapp: "https://wa.me/6282299995087",
+          mapEmbed:
+            "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31735.619248999297!2d106.87317000000002!3d-6.137097!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f572cfbf0769%3A0xa0627611e8f9480e!2sRaja%20Emas%20Indonesia%20Sunter!5e0!3m2!1sid!2sus!4v1751115296103!5m2!1sid!2sus",
+        },
+        {
           title: "Jakarta Selatan - Pondok Indah",
           address:
             "Jl. Metro Pondok Indah No.161 Blok Tb27, Pd. Pinang, Kec. Kby. Lama, akarta Selatan, 12310.",
@@ -205,6 +216,17 @@ export const locationData = {
           whatsapp: "0822-9999-5042",
           hours: "Pukul 10.00 - 20.00 WIB",
           linkWhatsapp: "https://wa.me/6282299995042",
+          mapEmbed:
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.419779786197!2d107.57998599999999!3d-6.9597074999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e90bc533359f%3A0xb1f70250c3e151ed!2sRaja%20Emas%20Indonesia%20Kopo%20-%20Bandung!5e0!3m2!1sid!2sid!4v1746959502938!5m2!1sid!2sid",
+        },
+        {
+          title: "Outlet Bandung-Otista",
+          address:
+            "Jl. Otto Iskandar Dinata No.313, Balonggede, Kec. Regol, Kota Bandung, Jawa Barat 40251",
+          phone: "0822-9999-5075",
+          whatsapp: "0822-9999-5075",
+          hours: "Pukul 10.00 - 20.00 WIB",
+          linkWhatsapp: "https://wa.me/6282299995075",
           mapEmbed:
             "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.419779786197!2d107.57998599999999!3d-6.9597074999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e90bc533359f%3A0xb1f70250c3e151ed!2sRaja%20Emas%20Indonesia%20Kopo%20-%20Bandung!5e0!3m2!1sid!2sid!4v1746959502938!5m2!1sid!2sid",
         },
