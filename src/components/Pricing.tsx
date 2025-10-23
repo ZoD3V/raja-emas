@@ -83,7 +83,7 @@ const Pricing = () => {
             ${isLast ? "rounded-bl-2xl" : ""}
           `}
                       >
-                        {item.kadar}
+                        {item.n}
                       </td>
                       <td
                         className={`px-4 py-4 text-center font-table bg-primary-100 text-sm md:text-base font-medium

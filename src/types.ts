@@ -56,6 +56,7 @@ export interface ISocials {
 
 export interface JewelryItem {
   kadar: string;
+  n: string;
   harga: string;
 }
 
